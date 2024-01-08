@@ -34,20 +34,20 @@ print("\nPhishing URLs:\nThese type of URLs are generally created by hackers tha
 print("\nDataset Summary\n")
 print(data.groupby("type").size())
 
-## Visualization
+# Visualization
 # Count of links per type =================================
-# mat.figure(figsize=(8, 5))
-# sns.countplot(x='type', data=data)
-# mat.title("Number of URLs per type")
-# mat.show()
+mat.figure(figsize=(8, 5))
+sns.countplot(x='type', data=data)
+mat.title("Number of URLs per type")
+mat.show()
 
-# type_counts = data['type'].value_counts()
+type_counts = data['type'].value_counts()
 
-# # Pie chart of links per type (which gives percentage of per type) =================================
-# mat.pie(type_counts, labels=type_counts.index, autopct='%1.1f%%', startangle=90)
-# mat.axis('equal')
-# mat.title('Distribution of URL Types')
-# mat.show()
+# Pie chart of links per type (which gives percentage of per type) =================================
+mat.pie(type_counts, labels=type_counts.index, autopct='%1.1f%%', startangle=90)
+mat.axis('equal')
+mat.title('Distribution of URL Types')
+mat.show()
 
 # Split data
 df = pds.DataFrame(data)
