@@ -1,13 +1,9 @@
 import pandas as pds
 import matplotlib.pyplot as mat
 import seaborn as sns
-from sklearn import svm 
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from xgboost import XGBClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 
@@ -28,8 +24,10 @@ print("\n================ SUMMARY ================")
 print("URL Type Description")
 print("\nBenign URLs:\nThese are safe to browse URLs.")
 print("\nMalware URLs:\nThese type of URLs inject malware into the victim's system once he/she visit such URLs.")
-print("\nDefacement URLs:\nThese type of URLs are generally created by hackers with the intention of breaking into a web server \nand replacing the hosted website with one of their own, using techniques such as code injection, cross-site scripting, etc.")
-print("\nPhishing URLs:\nThese type of URLs are generally created by hackers that will try to steal sensitive personal \nor financial information such as login credentials, credit card numbers, internet banking details, etc.")
+print("\nDefacement URLs:\nThese type of URLs are generally created by hackers with the intention of breaking into a web server")
+print("and replacing the hosted website with one of their own, using techniques such as code injection, cross-site scripting, etc.")
+print("\nPhishing URLs:\nThese type of URLs are generally created by hackers that will try to steal sensitive personal")
+print("or financial information such as login credentials, credit card numbers, internet banking details, etc.")
 
 print("\nDataset Summary\n")
 print(data.groupby("type").size())
